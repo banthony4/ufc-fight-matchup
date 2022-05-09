@@ -6,8 +6,8 @@ class CreateFighters < ActiveRecord::Migration[6.1]
       t.string :full_name
       t.integer :age
       t.integer :rank
-      t.integer :height
-      t.integer :reach
+      t.float :height
+      t.float :reach
       t.string :record
       t.string :image_url
     end
