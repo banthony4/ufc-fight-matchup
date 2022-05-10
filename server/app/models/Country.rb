@@ -1,4 +1,4 @@
-class Division < ActiveRecord::Base
+class Country < ActiveRecord::Base
   has_many :fighters
 
 end

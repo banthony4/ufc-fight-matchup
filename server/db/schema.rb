@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_09_170728) do
+ActiveRecord::Schema.define(version: 2022_05_10_150647) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "fighter_id"
@@ -34,12 +34,12 @@ ActiveRecord::Schema.define(version: 2022_05_09_170728) do
     t.integer "division_id"
     t.integer "country_id"
     t.string "full_name"
-    t.integer "age"
-    t.integer "rank"
     t.float "height"
     t.float "reach"
     t.string "record"
     t.string "image_url"
+    t.string "fighter_url"
+    t.string "action_url"
     t.index ["country_id"], name: "index_fighters_on_country_id"
     t.index ["division_id"], name: "index_fighters_on_division_id"
   end

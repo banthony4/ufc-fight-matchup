@@ -41,8 +41,8 @@ function NavBar() {
             </Link>
           </li>
           <li className='nav-text'>
-            <Link to='/matchups'>
-              Matchups
+            <Link to='/matchupcreator'>
+              Matchup Creator
             </Link>
           </li>
         </ul>
