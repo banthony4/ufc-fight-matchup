@@ -4,7 +4,7 @@ class FightersController < ApplicationController
     Fighter.all.to_json
   end
 
-  get '/fighter/:id' do
+  get '/fighters/:id' do
     Fighter.find(params[:id]).to_json
   end
   

@@ -1,5 +1,4 @@
 class Fighter < ActiveRecord::Base
-  belongs_to :division
   belongs_to :country
-
+  belongs_to :division
 end
