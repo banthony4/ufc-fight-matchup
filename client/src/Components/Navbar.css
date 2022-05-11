@@ -3,7 +3,7 @@
   background-color: red;
   height: 80px;
   display: flex;
-  justify-content: flex-flex-start;
+  justify-content: flex-start;
   align-items: center;
 }
 .menu-bars{

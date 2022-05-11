@@ -23,6 +23,10 @@
 .stats{
   display: inline-block;
 }
+.stats img{
+  height: 5rem;
+  width: 10rem;
+}
 .fighters img{
   height: 150px;
   width: 200px;

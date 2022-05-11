@@ -4,8 +4,8 @@ class DivisionsController < ApplicationController
     Division.all.to_json
   end
 
-  get 'divisions/:id' do 
-    Division.find(params[:id]).to_json
+  get '/divisions/:id' do 
+    Division.find(params[:id]).to_json(:include => { :fighters => { :methods => :flag }})
   end
 
 end
