@@ -1,6 +1,7 @@
 import React from 'react'
 
-function WeightClasses() {
+function WeightClasses({ fighters }) {
+  
   return (
     <div>WeightClasses</div>
   )

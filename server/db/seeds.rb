@@ -2,6 +2,7 @@ puts "🌱 Seeding spices..."
 Division.destroy_all
 Country.destroy_all
 Fighter.destroy_all
+SavedMatchup.destroy_all
 
 puts '🌱 seeding divisions'
 Division.create(id: 0, name: 'Women\'s Strawweight' , weight_limit: 115)
@@ -74,5 +75,7 @@ Fighter.create(full_name: "Nina Ansaroff", country_id: 1, height: 65, reach: 64,
 Fighter.create(full_name: "Tecia Torres", country_id: 1, height: 61, reach: 60.5, wld: "13-6-0", img_url: "https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2022-04/b21edec5-1f46-41d6-84e4-6b9e068c9981%252FTORRES_TECIA_04-09.png?itok=ZfR52ifE",action_url: "https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2022-04/030219-Tecia-Torres-GettyImages-1128453696.jpg?h=d1cb525d&itok=6MzlgCX9", headshot_url: "https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2021-08/69341%252Fprofile-galery%252Ffullbodyleft-picture%252FTORRES_TECIA_L_08-07.png?itok=3MsxmRDr", division_id: 0)
 Fighter.create(full_name: "Amanda Ribas", country_id: 0, height: 64, reach: 66, wld: "11-2-0", img_url: "https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2021-05/67290%252Fprofile-galery%252Fprofile-picture%252FRIBAS_AMANDA_05-08.png?VersionId=null&itok=qcle21fx",action_url: "https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2019-10/AmandaRibasHero.jpg?VersionId=7N1C40iFjsJhatMvUI_9gGyb9JCTHVml&itok=UjFXDm4v", headshot_url: "https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2021-05/67290%252Fprofile-galery%252Ffullbodyleft-picture%252FRIBAS_AMANDA_L_05-08.png?VersionId=null&itok=TbObXEY-", division_id: 0)
 Fighter.create(full_name: "Michelle Waterson", country_id: 1, height: 63, reach: 62, wld: "18-9-0", img_url: "https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2021-05/68816%252Fprofile-galery%252Fprofile-picture%252FWATERSON_MICHELLE_05-08.png?VersionId=null&itok=ZV4wa3cQ",action_url: "https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2020-09/MichellWatersonHeroUpdated.jpg?VersionId=RrSq8mZ8QIpuZXX0AAFiuMKK4Ew_3N4s&h=d1cb525d&itok=MGSjYDUi", headshot_url: "https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2021-05/68816%252Fprofile-galery%252Ffullbodyleft-picture%252FWATERSON_MICHELLE_L_05-08.png?VersionId=null&itok=Q0Uc1lJv", division_id: 0)
+
+SavedMatchup.create(fighter1: "Michelle Waterson", fighter1_img: "https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2021-05/68816%252Fprofile-galery%252Ffullbodyleft-picture%252FWATERSON_MICHELLE_L_05-08.png?VersionId=null&itok=Q0Uc1lJv", fighter2: "Amanda Ribas", fighter2_img: "https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2021-05/67290%252Fprofile-galery%252Ffullbodyleft-picture%252FRIBAS_AMANDA_L_05-08.png?VersionId=null&itok=TbObXEY-")
 
 puts "✅ Done seeding!"

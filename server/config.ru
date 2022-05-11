@@ -16,3 +16,4 @@ run ApplicationController
 use FightersController
 use DivisionsController
 use CountriesController
+use SavedMatchupsController

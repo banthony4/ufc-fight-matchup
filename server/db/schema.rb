@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_10_150647) do
+ActiveRecord::Schema.define(version: 2022_05_11_194447) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "fighter_id"
@@ -42,6 +42,13 @@ ActiveRecord::Schema.define(version: 2022_05_10_150647) do
     t.string "action_url"
     t.index ["country_id"], name: "index_fighters_on_country_id"
     t.index ["division_id"], name: "index_fighters_on_division_id"
+  end
+
+  create_table "saved_matchups", force: :cascade do |t|
+    t.string "fighter1"
+    t.string "fighter1_img"
+    t.string "fighter2"
+    t.string "fighter2_img"
   end
 
   add_foreign_key "comments", "fighters"

@@ -45,6 +45,11 @@ function NavBar() {
               Matchup Creator
             </Link>
           </li>
+          <li className='nav-text'>
+            <Link to='/savedmatchups'>
+              Saved Matchups
+            </Link>
+          </li>
         </ul>
       </nav>
       </IconContext.Provider>

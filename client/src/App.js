@@ -5,6 +5,7 @@ import NavBar from './Components/NavBar';
 import Home from './Components/Home';
 import WeightClasses from './Components/WeightClasses';
 import MatchupCreator from './Components/MatchupCreator';
+import SavedMatchups from './Components/SavedMatchups';
 
 function App() {
   const [fighters, setFighters] = useState([])
@@ -15,7 +16,6 @@ function App() {
   .then(data => setFighters(data))
   }, [])
 
-  console.log(fighters)
 
   return (
     <>
@@ -23,8 +23,9 @@ function App() {
         <NavBar />
         <Routes>
           <Route  exact path='/' element={<Home />} />
-          <Route path='/weightclasses' element={<WeightClasses />}/>
-          <Route path='/matchupcreator' element={<MatchupCreator fighters={fighters}/>}/>
+          <Route path='/weightclasses' element={<WeightClasses fighters={fighters}/>}/>
+          <Route path='/matchupcreator' element={<MatchupCreator />}/>
+          <Route path='/savedmatchups' element={<SavedMatchups />}/>
         </Routes>
       </Router>
     </>
