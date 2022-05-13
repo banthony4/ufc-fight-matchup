@@ -104,4 +104,4 @@ function MatchupCreator({addMatch, fighter1, setFighter1, fighter2, setFighter2,
   )
 }
 
-export default MatchupCreator
+export default MatchupCreator;
