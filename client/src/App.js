@@ -66,7 +66,7 @@ function App() {
           <Route  exact path='/' element={<Home />} />
           <Route path='/weightclasses' element={<WeightClasses fighters={fighters} divisions={divisions}/>}/>
           <Route path='/fightercountries' element={<FighterCountries />}/>
-          <Route path='/matchupcreator' element={<MatchupCreator fighter1={fighter1} fighter2={fighter2} setFighter1={setFighter1} setFighter2={setFighter2} addMatch={addMatch} matchid={matchid} setMatchid={setMatchid} updateMatches={updateMatches}/>}/>
+          <Route path='/matchupcreator' element={<MatchupCreator fighters={fighters} fighter1={fighter1} fighter2={fighter2} setFighter1={setFighter1} setFighter2={setFighter2} addMatch={addMatch} matchid={matchid} setMatchid={setMatchid} updateMatches={updateMatches}/>}/>
           <Route path='/savedmatchups' element={<SavedMatchups matches={matches} handleDeleteMatch={handleDeleteMatch} handleEdit={handleEdit}/>}/>
         </Routes>
       </Router>

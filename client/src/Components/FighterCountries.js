@@ -66,100 +66,11 @@ const markers = [
   },
 ];
 
-// const brazilFighters = [
-//   { W_Bantam_Weight: "Amanda Nunes" },
-//   { W_Bantam_Weight: "Ketlen Vieira" },
-//   { W_Straw_Weight: "Marina Rodriguez" },
-//   { W_Straw_Weight: "Jessica Andrade" },
-//   { W_Straw_Weight: "Amanda Ribas" },
-//   { M_Welter_Weight: "Gilbert Burns" },
-//   { M_Light_Weight: "Charles Oliveira" },
-//   { M_Light_Weight: "Rafael Dos Anjos" },
-// ];
-  
-  // const usaFighters = [
-    // { W_Bantam_Weight: "Juianna Pena" },
-    // { W_Bantam_Weight: "Holly Holm" },
-    // { W_Bantam_Weight: "Raquel Pennington" },
-    // { W_Bantam_Weight: "Aspen Ladd"},
-    // { W_Bantam_Weight: "Sara McMann"},
-    // { W_Bantam_Weight: "Miesha Tate"},
-    // { W_Straw_Weight: "Carla Esparza"},
-    // { W_Straw_Weight: "Rose Namajunas"},
-    // { W_Straw_Weight: "Mackenzie Dern"},
-    // { W_Straw_Weight: "Nina Ansaroff"},
-    // { W_Straw_Weight: "Tecia Torres"},
-    // { W_Straw_Weight: "Michelle Waterson"},
-    // { M_Welter_Weight: "Colby Covington"},
-    // { M_Welter_Weight: "Belal Muhammad"},
-    // { M_Welter_Weight: "Vicente Luque"},
-    // { M_Welter_Weight: "Stephen Thompson"},
-    // { M_Welter_Weight: "Jorge Masvidal"},
-    // { M_Welter_Weight: "Sean Brady"},
-    // { M_Welter_Weight: "Neil Magny"},
-    // { M_Light_Weight: "Dustin Poirer"},
-    // { M_Light_Weight: "Justin Gaethje"},
-    //{ M_Light_Weight: "Michael Chandler"},
-    // { M_Light_Weight: "Tony Ferguson"},
-    // { M_Light_Weight: "Gregor Gillespie"}
-//]
-
-  //   const nigeriaFighters = [
-  //     {W_Bantam_Weight: "Yana Kunitskaya"},
-  //     {M_Light_Weight: "Islam Makhachev"}]
-
-  //     const jamaicaFighters = [
-  //       {W_Bantam_Weight: "Yana Kunitskaya"},
-  //       {M_Light_Weight: "Islam Makhachev"}]
-
-const russiaFighters = [
-  {W_Bantam_Weight: "Yana Kunitskaya"},
-  {M_Light_Weight: "Islam Makhachev"}]
-
-  // const mexicoFighters = [
-  //   {W_Bantam_Weight: "Yana Kunitskaya"},
-  //   {M_Light_Weight: "Islam Makhachev"}]
-
-  //   const irelandFighters = [
-  //     {W_Bantam_Weight: "Yana Kunitskaya"},
-  //     {M_Light_Weight: "Islam Makhachev"}]
-      
-  //     const kazakhstanFighters = [
-  //       {W_Bantam_Weight: "Yana Kunitskaya"},
-  //       {M_Light_Weight: "Islam Makhachev"}]
-
-  //       const iranFighters = [
-  //         {W_Bantam_Weight: "Yana Kunitskaya"},
-  //         {M_Light_Weight: "Islam Makhachev"}]
-
-  //         const chinaFighters = [
-  //           {W_Bantam_Weight: "Yana Kunitskaya"},
-  //           {M_Light_Weight: "Islam Makhachev"}]
-
-
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
-const handleClick = () => {
-  console.log(russiaFighters);
-};
-
-// const handleClickTwo = () => {
-//   console.log(brazilFighters);
-// };
-
-
 function FighterCountries() {
   const [content, setcontent] = useState("");
-  
-
-  //fetch for fighter from each country
-  // useEffect(()  => {
-  //   fetch('')
-  //   .then(res => res.json())
-  //   .then(res => setFighters)
-  // })
-
 
   return (
     <div
@@ -171,7 +82,8 @@ function FighterCountries() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        background: "#87ceeb",
+        background: "#494949",
+        fill: 'grey'
       }}>
       
       <h1>Mixed Martial Arts Physiography</h1>
@@ -186,7 +98,6 @@ function FighterCountries() {
               {({ geographies }) =>
                 geographies.map((geo) => (
                   <Geography
-                    // onClick={handleClick}
                     key={geo.rsmKey}
                     geography={geo}
                     onMouseEnter={() => {
@@ -242,35 +153,18 @@ function FighterCountries() {
                 ))
               }
             </Geographies>
-
-
-            {markers.map(({ name, coordinates, markerOffset }) => (
-              <Marker onClick={handleClick} key={name} coordinates={coordinates}>
-                <circle r={2} fill="#F00" stroke="#fff" strokeWidth={2} />
-                <text
-                  textAnchor="middle"
-                  y={markerOffset}
-                  style={{ fontFamily: "system-ui", fill: "white" }}
-                >
-                  {name}
-                </text>
-              </Marker>
+              {markers.map(({ name, coordinates, markerOffset }) => (
+                <Marker key={name} coordinates={coordinates}>
+                  <circle r={2} fill="#F00" stroke="#fff" strokeWidth={2} />
+                  <text
+                    textAnchor="middle"
+                    y={markerOffset}
+                    style={{ fontFamily: "system-ui", fill: "red" }}
+                  >
+                    {name}
+                  </text>
+                </Marker>
               ))}
-
-            {/* {markers.map(({ name_0, coordinates_0, markerOffset_0 }) => (
-              <Marker onClick={handleClickTwo} key={name_0} coordinates={coordinates_0}>
-              <circle r={0} fill="#F00" stroke="#fff" strokeWidth={2} />
-              <text
-                textAnchor="middle"
-                y={markerOffset_0}
-                style={{ fontFamily: "system-ui", fill: "white" }}
-              >
-                {name_0}
-              </text>
-            </Marker>
-            ))} */}
-
-
           </ZoomableGroup>
         </ComposableMap>
 

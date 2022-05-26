@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
-import './MatchupCreator.css'
 
 function MatchupCreator({addMatch, fighter1, setFighter1, fighter2, setFighter2, matchid, setMatchid, updateMatches}) {
   const[division, setDivision] = useState(0)
@@ -71,6 +70,7 @@ function MatchupCreator({addMatch, fighter1, setFighter1, fighter2, setFighter2,
           {fighter1? <button className='button' onClick={() => setFighter1(null)}>Select Another Fighter</button> : null}
         </div>
         <div className='stats'>
+          <span className='flagimg'>{fighter1? <img src={fighter1.flag} alt='fighter1'/> : null}</span> <span className='flagimg'>{fighter2? <img src={fighter2.flag} alt='fighter2'/> : null}</span>
           <h2 className='statline'>{fighter1? fighter1.full_name.split(" ")[1] : null} <span className='center-text'>vs.</span> {fighter2? fighter2.full_name.split(" ")[1] : null}</h2>
           <h2 className='statline'>{fighter1? `${fighter1.height}"` : null} <span className='center-text'>Height</span> {fighter2? `${fighter2.height}"` : null}</h2>
           <h2 className='statline'>{fighter1? `${fighter1.reach}"` : null} <span className='center-text'>Reach</span> {fighter2? `${fighter2.reach}"` : null}</h2>
@@ -93,7 +93,6 @@ function MatchupCreator({addMatch, fighter1, setFighter1, fighter2, setFighter2,
         <button className='button' onClick={(e) => setDivision(e.target.id)} id='2'>Men's Welterweight</button>
         <button className='button' onClick={(e) => setDivision(e.target.id)} id='3'>Men's Lightweight</button>
       </ul>
-      <h1>Choose Your Fighter:</h1>
       <div className='fighters'>
         <h1 style={{'padding' : '10px'}}>Choose Your Fighter:</h1>
         {divisionFighters.map(fighter => {
